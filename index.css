@@ -1,0 +1,102 @@
+:root {
+    /* colors */
+    --main-color: #0e609a;
+    --secondary-color: #009ceb;
+    --second-anchor-link-color: #89c43e;
+    --third-anchor-link-color: #e02d75;
+    ;
+    /*offsets*/
+    --horizontal-offset: 3.5rem;
+
+    /* font-size */
+    --sm-font-size: 0.9375rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    min-height: 300vh;
+}
+
+.a {
+    text-decoration: none;
+    font-size: var(--sm-font-size);
+}
+
+.a__navigation {
+    font-weight: 600;
+}
+
+.a--blue {
+    color: var(--secondary-color);
+}
+
+.a--green {
+    color: var(--second-anchor-link-color);
+}
+
+.a--red {
+    color: var(--third-anchor-link-color);
+}
+
+.nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.svg__hamburger {
+    margin-right: -.5rem;
+}
+
+.header__main {
+    position: sticky;
+    background-color: white;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--horizontal-offset);
+    padding-right: var(--horizontal-offset);
+    padding-top: .75rem;
+}
+
+.img__logo {
+    max-width: 198px;
+}
+
+.button {
+    font-family: 'Heebo', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.button__nav:hover,
+.button__nav:active {
+    text-decoration: underline;
+}
+
+.button::after {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    position: absolute;
+    background-color: #009ceb;
+    top: 0rem;
+}
+
+.button__nav {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: var(--secondary-color);
+    height: 2rem;
+    padding: .25rem .25rem .25rem 1rem;
+    border-radius: 1rem 0 0 1rem / 1rem 0 0 1rem;
+}
