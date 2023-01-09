@@ -5,6 +5,8 @@
     --second-anchor-link-color: #89c43e;
     --third-anchor-link-color: #e02d75;
     --headline-section-color: #002738;
+    --left-hand-grid-color: #004E78;
+
     /* offsets */
     --horizontal-offset: 3.438rem;
 
@@ -14,11 +16,31 @@
     --regLg-font-size: 1.125rem;
     --lgSm-font-size: 1.625rem;
     --lg-font-size: 1.875rem;
-    /* Min-Heights / Max-Widths */
+
+    /* font-weights */
+    --reg-font-weight: 400;
+    --med-font-weight: 500;
+    --bold-font-weight: 700;
+
+    /* Heights / Widths */
     --section-headline-height: 16.5rem;
     --navBar-height: 4.625rem;
-    --section-explore-height: 36.875rem;
+    --section-height: 36.875rem;
+    --button-lg-width: 13.188rem;
+    --button-height: 1.875rem;
+    --section-h1-max-width: 30.688rem;
+    --footer-height: 20.9375rem;
+
+    /* Paddings / Margins / Gaps */
+    --paragraph-top-margin: 0.688rem;
     --section-top-padding: 3.875rem;
+    --section-bottom-padding: var(--section-top-padding);
+    --anchor-button-top-margin: 1.813rem;
+    --grid-gap: 3.4375rem;
+    --h1--benefits-margin-bottom: 2rem;
+
+    /* Line height/ letter spacing */
+    --paragraph-line-height: 170%;
 }
 
 * {
@@ -29,16 +51,33 @@
 
 body {
     font-family: 'Heebo', sans-serif;
-    min-height: 300vh;
+    color: white;
+}
+
+tspan {
+    font-family: 'Pragati Narrow', sans-serif;
+    font-weight: 700;
 }
 
 .a {
     text-decoration: none;
     font-size: var(--sm-font-size);
+    cursor: pointer;
+    font-weight: var(--bold-font-weight);
+}
+
+.p {
+    margin-top: var(--paragraph-top-margin);
+    line-height: var(--paragraph-line-height);
+}
+
+.h1 {
+    font-size: var(--lg-font-size);
+    max-width: var(--section-h1-max-width);
 }
 
 .a__navigation {
-    font-weight: 600;
+    font-weight: var(--bold-font-weight);
 }
 
 .a__navigation:is(:hover, :focus) {
@@ -91,6 +130,7 @@ body {
     justify-content: space-between;
     padding-left: var(--horizontal-offset);
     padding-right: var(--horizontal-offset);
+    z-index: 99;
 }
 
 .svg__search {
@@ -106,11 +146,11 @@ body {
     font-family: 'Heebo', sans-serif;
     border: none;
     cursor: pointer;
-    transition: 1s ease;
 }
 
-.button__nav:hover,
-.button__nav:active {
+.button__nav:is(:hover, :focus),
+.a__button--whiteOutline:is(:hover, :focus),
+.a__button--darkOutline:is(:hover, :focus) {
     text-decoration: underline;
 }
 
@@ -139,17 +179,22 @@ body {
     border-radius: 1rem 0 0 1rem / 1rem 0 0 1rem;
 }
 
-.section__headline,
-.section__explore {
+.section__headline {
     padding-left: var(--horizontal-offset);
 }
 
 .video__typing {
-    position: absolute;
-    z-index: -1;
-    left: 0;
     max-width: 100vw;
 }
+
+.sectionWrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: var(--section-top-padding);
+    left: var(--horizontal-offset);
+}
+
 
 .section__headline {
     display: flex;
@@ -158,6 +203,175 @@ body {
     background-color: var(--headline-section-color);
 }
 
+.section__explore,
+.section__grid {
+    max-height: var(--section-height);
+    overflow: hidden;
+}
+
 .section__explore {
-    min-height: var(--section-explore-height);
+    position: relative;
+    color: white;
+}
+
+.a__button--darkOutline,
+.a__button--whiteOutline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    border: 1px solid white;
+    width: var(--button-lg-width);
+    border-radius: 2rem;
+    height: var(--button-height);
+    order: 3;
+    margin-top: var(--anchor-button-top-margin);
+    transition: 1s ease;
+}
+
+.h1__headline {
+    order: 2;
+}
+
+.h1__section {
+    max-width: var(--section-h1-max-width);
+    font-size: var(--lg-font-size);
+}
+
+.h2 {
+    order: 1;
+    font-weight: var(--reg-font-weight);
+    font-size: var(--regLg-font-size);
+}
+
+.section__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sectionLeftFocus {
+    padding-left: var(--horizontal-offset);
+    padding-top: var(--section-top-padding);
+    background-color: var(--left-hand-grid-color);
+}
+
+.img__bgSectionRight {
+    width: 100%;
+    height: 100%;
+}
+
+.p__sectionLeftFocus {
+    max-width: 32.188rem;
+    font-size: var(--sm-font-size);
+}
+
+.section__join {
+    padding: var(--section-top-padding) 0 var(--section-bottom-padding) var(--horizontal-offset);
+    background-image: url("./assets/Mask\ Group\ 139@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.section__business,
+.section__party {
+    padding-top: var(--section-top-padding);
+    min-height: var(--section-height);
+    position: relative;
+    background-color: #00273864;
+
+}
+
+.section__business {
+    padding-left: var(--horizontal-offset);
+}
+
+.section__party {
+    padding-right: var(--horizontal-offset);
+}
+
+.sectionBusinessWrapper,
+.sectionPartyWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.h1__leftBusiness,
+.h1__rightParty {
+    order: 2;
+}
+
+.p__leftBusiness {
+    order: 3;
+}
+
+.sectionPartyWrapper {
+    align-items: flex-end;
+}
+
+
+.p__rightParty {
+    order: 3;
+    text-align: end;
+}
+
+.h1__rightParty {
+    max-width: initial;
+}
+
+.img__bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.ul__benefits {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--grid-gap);
+}
+
+.h1__benefits {
+    color: var(--left-hand-grid-color);
+    margin-bottom: var(--h1--benefits-margin-bottom);
+}
+
+.a__button--darkOutline {
+    color: var(--left-hand-grid-color);
+    border: 1px solid var(--left-hand-grid-color);
+}
+
+.section__benefits {
+    padding: var(--section-top-padding) var(--horizontal-offset) var(--section-bottom-padding) var(--section-bottom-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    padding: var(--section-top-padding) var(--horizontal-offset) 2.5rem var(--horizontal-offset);
+    display: flex;
+    flex-direction: column;
+    background-image: url(./assets//Mask\ Group\ 143.png);
+    min-height: var(--footer-height);
+}
+
+.h1__footer {
+    max-width: 100%;
+    order: 2;
+}
+
+.h2__footer {
+    order: 1;
+}
+
+.section__footer {
+    order: 3;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
 }
