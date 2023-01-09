@@ -30,6 +30,7 @@
     --button-height: 1.875rem;
     --section-h1-max-width: 30.688rem;
     --footer-height: 20.9375rem;
+    --paragraph-max-width: 30.5rem;
 
     /* Paddings / Margins / Gaps */
     --paragraph-top-margin: 0.688rem;
@@ -185,8 +186,14 @@ tspan {
     padding-left: var(--horizontal-offset);
 }
 
+.img__headline {
+    max-width: 75vw;
+}
+
 .video__typing {
-    max-width: 100vw;
+    height: var(--section-height);
+    width: 100vw;
+    object-fit: cover;
 }
 
 .sectionWrapper {
@@ -245,14 +252,13 @@ tspan {
 .sectionLeftFocus {
     display: flex;
     flex-direction: column;
-    padding-left: var(--horizontal-offset);
-    padding-top: var(--section-top-padding);
+    padding: var(--section-top-padding) var(--horizontal-offset) 0 var(--horizontal-offset);
     background-color: var(--left-hand-grid-color);
 }
 
 .img__bgSectionRight {
     width: 100%;
-    height: 100%;
+    height: var(--section-height);
 }
 
 .p__sectionLeftFocus {
@@ -270,19 +276,11 @@ tspan {
 
 .section__business,
 .section__party {
-    padding-top: var(--section-top-padding);
+    padding: var(--section-top-padding) var(--horizontal-offset) 0 var(--horizontal-offset);
     min-height: var(--section-height);
     position: relative;
     background-color: #00273864;
 
-}
-
-.section__business {
-    padding-left: var(--horizontal-offset);
-}
-
-.section__party {
-    padding-right: var(--horizontal-offset);
 }
 
 .sectionBusinessWrapper,
@@ -298,6 +296,11 @@ tspan {
 
 .p__rightParty {
     text-align: end;
+    max-width: 45rem;
+}
+
+.p__leftBusiness {
+    max-width: 45rem;
 }
 
 .h1__rightParty {
@@ -354,4 +357,30 @@ tspan {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.p__footer {
+    max-width: var(--paragraph-max-width);
+}
+
+@media (max-width:1350px) {
+    :root {
+        --grid-gap: 2rem;
+    }
+}
+
+@media (max-width:1225px) {
+    :root {
+        --grid-gap: 1rem;
+    }
+}
+
+@media (max-width:1140px) {
+    :root {
+        --grid-gap: 4rem;
+    }
+
+    .ul__benefits {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
