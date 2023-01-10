@@ -16,6 +16,7 @@
     --regLg-font-size: 1.125rem;
     --lgSm-font-size: 1.625rem;
     --lg-font-size: 1.875rem;
+    --anchor-font-size: 0.9rem;
 
     /* font-weights */
     --reg-font-weight: 400;
@@ -27,11 +28,16 @@
     --navBar-height: 4.625rem;
     --section-height: 36.875rem;
     --button-lg-width: 13.188rem;
+    --button-sm-width: 9.188rem;
     --button-height: 1.875rem;
     --section-h1-max-width: 30.688rem;
     --footer-height: 20.9375rem;
     --paragraph-max-width: 30.5rem;
     --mobile-section-height: 3.5rem;
+    --paragraph-party-max-width: 33.625rem;
+
+    --tablet-paragraph-max-width: 32.188rem;
+    --headers-max-mobile-width: 20.875rem;
 
     /* Paddings / Margins / Gaps */
     --paragraph-top-margin: 0.688rem;
@@ -63,7 +69,7 @@ tspan {
 
 .a {
     text-decoration: none;
-    font-size: var(--sm-font-size);
+    font-size: var(--anchor-font-size);
     cursor: pointer;
     font-weight: var(--bold-font-weight);
 }
@@ -73,6 +79,7 @@ tspan {
     margin-top: var(--paragraph-top-margin);
     line-height: var(--paragraph-line-height);
     font-size: var(--sm-font-size);
+    font-weight: var(--reg-font-weight);
 }
 
 .h1 {
@@ -95,7 +102,7 @@ tspan {
 }
 
 .a__navigation {
-    font-weight: var(--bold-font-weight);
+    font-weight: var(--med-font-weight);
 }
 
 .a__navigation:is(:hover, :focus) {
@@ -196,6 +203,7 @@ tspan {
 
 .button__nav,
 .button__navMobile {
+    font-weight: 700;
     position: relative;
     text-align: center;
     color: white;
@@ -210,6 +218,7 @@ tspan {
 .button__navMobile {
     background-color: white;
     color: var(--secondary-color);
+    margin-bottom: 0;
 }
 
 .section__headline {
@@ -260,12 +269,19 @@ tspan {
     justify-content: center;
     color: inherit;
     border: 1px solid white;
-    width: var(--button-lg-width);
     border-radius: 2rem;
     height: var(--button-height);
     order: 3;
     margin-top: var(--anchor-button-top-margin);
     transition: 1s ease;
+}
+
+.a__button--large {
+    width: var(--button-lg-width);
+}
+
+.a__button--small {
+    width: var(--button-sm-width);
 }
 
 .h2 {
@@ -323,14 +339,13 @@ tspan {
     align-items: flex-end;
 }
 
+.p__rightParty,
+.p__leftBusiness {
+    max-width: var(--paragraph-party-max-width);
+}
 
 .p__rightParty {
     text-align: end;
-    max-width: 45rem;
-}
-
-.p__leftBusiness {
-    max-width: 45rem;
 }
 
 .h1__rightParty {
@@ -366,7 +381,7 @@ tspan {
 }
 
 .section__benefits {
-    padding: var(--section-top-padding) var(--horizontal-offset) var(--section-bottom-padding) var(--section-bottom-padding);
+    padding: var(--section-top-padding) var(--horizontal-offset) var(--section-bottom-padding) var(--horizontal-offset);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -378,6 +393,11 @@ tspan {
     flex-direction: column;
     background-image: url(./assets//Mask\ Group\ 143.png);
     min-height: var(--footer-height);
+}
+
+.a__buttonFooter {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .h1__footer {
@@ -418,6 +438,10 @@ tspan {
 }
 
 @media (max-width:1000px) {
+    .p {
+        max-width: var(--tablet-paragraph-max-width);
+    }
+
     .button__nav {
         display: none;
     }
@@ -453,6 +477,7 @@ tspan {
 
     .svg__phone {
         display: block;
+        margin-bottom: .25rem;
     }
 }
 
@@ -486,11 +511,30 @@ tspan {
         --regLg-font-size: 1.125rem;
         --lgSm-font-size: 1.625rem;
         --lg-font-size: 1.5rem;
-
     }
 
     .ul__benefits {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .h1,
+    .h2,
+    .p {
+        max-width: var(--headers-max-mobile-width);
+    }
+}
+
+@media (max-width: 505px) {
+    :root {
+        --horizontal-offset: 1.25rem;
+    }
+
+    .img__headline {
+        min-width: 248px;
+    }
+
+    .ul__benefits {
+        gap: 1rem;
     }
 }
