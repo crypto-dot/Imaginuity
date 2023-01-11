@@ -109,10 +109,6 @@ tspan {
     text-decoration: underline;
 }
 
-.a__navigation::after:is(:hover, :focus) {
-    text-decoration: none !important;
-}
-
 .a__navigation::after {
     content: attr(data-end);
     cursor: pointer;
@@ -314,7 +310,7 @@ tspan {
 
 .section__join {
     padding: var(--section-top-padding) 0 var(--section-bottom-padding) var(--horizontal-offset);
-    background-image: url("./assets/Mask\ Group\ 139@2x.png");
+    background-image: url("./assets/Mask Group 139.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -413,6 +409,16 @@ tspan {
 
 .p__footer {
     max-width: var(--paragraph-max-width);
+}
+
+@media (min-width:1600px) {
+    .section__join {
+        background-image: url("assets/Mask\ Group\ 139@2x.png");
+    }
+
+    .footer {
+        background-image: url("assets/Mask\ Group\ 143@2x.png");
+    }
 }
 
 @media (max-width:1350px) {
