@@ -6,6 +6,7 @@
     --third-anchor-link-color: #e02d75;
     --headline-section-color: #002738;
     --left-hand-grid-color: #004E78;
+    --left-hand-grid-color-photo-filter: #00507a80;
 
     /* offsets */
     --horizontal-offset: 3.438rem;
@@ -321,7 +322,7 @@ tspan {
     padding: var(--section-top-padding) var(--horizontal-offset) 0 var(--horizontal-offset);
     min-height: var(--section-height);
     position: relative;
-    background-color: #00273864;
+    background-color: var(--left-hand-grid-color-photo-filter);
 
 }
 
