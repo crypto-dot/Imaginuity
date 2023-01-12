@@ -525,6 +525,12 @@ tspan {
         --logo-width: 8.125rem;
     }
 
+    .nav {
+        align-items: flex-end;
+        padding-bottom: 0.6rem;
+    }
+
+
     .ul__benefits {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
