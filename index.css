@@ -28,14 +28,15 @@
     --section-headline-height: 16.5rem;
     --navBar-height: 4.625rem;
     --section-height: 36.875rem;
+    --button-height: 1.875rem;
+    --footer-height: 20.9375rem;
+    --mobile-section-height: 3.5rem;
+    --section-join-height: 18.25rem;
     --button-lg-width: 13.188rem;
     --button-sm-width: 9.188rem;
     --button-xsm-width: 8.4375rem;
-    --button-height: 1.875rem;
     --section-h1-max-width: 30.688rem;
-    --footer-height: 20.9375rem;
     --paragraph-max-width: 30.5rem;
-    --mobile-section-height: 3.5rem;
     --paragraph-party-max-width: 33.625rem;
     --logo-width: 12.375rem;
 
@@ -307,6 +308,7 @@ tspan {
     flex-direction: column;
     padding: var(--section-top-padding) var(--horizontal-offset) var(--section-top-padding) var(--horizontal-offset);
     background-color: var(--left-hand-grid-color);
+    max-height: var(--section-height);
 }
 
 .img__bgSectionRight {
@@ -334,6 +336,7 @@ tspan {
             url("./assets/Mask\ Group\ 139@2x.png") 2x);
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: var(--section-join-height);
 
 }
 
