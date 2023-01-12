@@ -451,6 +451,7 @@ tspan {
 
     .section__mobileConnect {
         display: flex;
+        margin-right: .75rem;
     }
 
     .sectionPartyWrapper {
@@ -481,6 +482,10 @@ tspan {
     .svg__phone {
         display: block;
         margin-bottom: .25rem;
+    }
+
+    .a__buttonFooter {
+        margin-left: initial;
     }
 }
 
