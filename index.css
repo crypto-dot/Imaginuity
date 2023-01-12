@@ -36,6 +36,7 @@
     --paragraph-max-width: 30.5rem;
     --mobile-section-height: 3.5rem;
     --paragraph-party-max-width: 33.625rem;
+    --logo-width: 12.375rem;
 
     --tablet-paragraph-max-width: 32.188rem;
     --headers-max-mobile-width: 20.875rem;
@@ -165,7 +166,7 @@ tspan {
 }
 
 .img__logo {
-    max-width: 198px;
+    max-width: var(--logo-width);
 }
 
 .button {
@@ -521,6 +522,7 @@ tspan {
         --lg-font-size: 1.5rem;
 
         --navBar-height: 3.5rem;
+        --logo-width: 8.125rem;
     }
 
     .ul__benefits {
