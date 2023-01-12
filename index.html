@@ -17,7 +17,7 @@
 <body>
     <main>
         <header class="header header__main">
-            <img alt="logo of imaginuity" class="img img__logo" src="./assets/logo.svg" />
+            <img alt="logo of imaginuity" class="img img__logo" src="assets/logo.svg" />
             <nav class="nav">
                 <a data-end="&#160;/" class="a a__navigation a__navigation--blue"
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Brand Experience</a>
@@ -27,8 +27,8 @@
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Technology</a>
 
 
-                <svg aria-expanded="false" class="svg svg__hamburger" xmlns="http://www.w3.org/2000/svg"
-                    stroke="#0e609a" viewBox="0 0 100 100" width="23" height="25">
+                <svg class="svg svg__hamburger" xmlns="http://www.w3.org/2000/svg" stroke="#0e609a"
+                    viewBox="0 0 100 100" width="23" height="25">
                     <line class="line__top" x1="0" y1="8" x2="99" y2="8" stroke-width="8" />
                     <line class="line__middle" x1="0" y1="43" x2="90" y2="43" stroke-width="8" />
                     <line class="line__bottom" x1="0" y1="76" x2="99" y2="76" stroke-width="8" />
@@ -54,15 +54,15 @@
 
             </nav>
         </header>
-        <section class="section section__mobileConnect">
+        <div class="section section__mobileConnect">
             <button class="button button__navMobile">> Let's Connect</button>
-        </section>
+        </div>
         <section class="section section__headline">
-            <img alt="text stating imaginarians wanted" class="img img__headline" src="./assets/imaginariansWanted.svg">
+            <img alt="text stating imaginarians wanted" class="img img__headline" src="assets/imaginariansWanted.svg">
         </section>
         <section class="section section__explore">
             <video class="video__typing" autoplay muted loop>
-                <source src="./assets/Recruiting Task Force Hero Video Loop.mp4" type="video/mp4">
+                <source src="assets/Recruiting Task Force Hero Video Loop.mp4" type="video/mp4">
             </video>
             <div class="sectionWrapper">
                 <h1 class="h1 h1__headline">Imaginuity is partly about imagination, partly about
@@ -76,7 +76,7 @@
                     Positions</a>
             </div>
         </section>
-        <section class="section section__grid">
+        <div class="section section__grid">
             <section class="section sectionLeftFocus">
                 <h1 class="h1 h1__sectionFocus">
                     Growth-focused career paths. Lorem ipsum dolor sit amet.</h1>
@@ -90,14 +90,14 @@
                 </p>
                 <a class="a a__button--whiteOutline a__button--small" href="https://www.imaginuity.com/careers/apply/">
                     > Learn more</a>
-            </section>
-            <section class="section section_right">
-                <picture>
-                    <source media="(min-width:1600px)" srcset="./assets/MaskGroup138@2x.png">
-                    <img alt="woman standing in front of three arrows going in different directions"
-                        class="img img__bgSectionRight" src="./assets/Mask Group 138.png" />
-                </picture>
-            </section>
+        </div>
+        <div class="section section_right">
+            <picture>
+                <source media="(min-width:1600px)" srcset="assets/MaskGroup138@2x.png">
+                <img alt="woman standing in front of three arrows going in different directions"
+                    class="img img__bgSectionRight" src="assets/Mask Group 138.png" />
+            </picture>
+        </div>
         </section>
         <section class="section section__join">
             <h1 class="h1 h1__join">Ready To Join Us? <br> Check out Open Roles now</h1>
@@ -121,8 +121,8 @@
                         More</a>
                 </div>
                 <picture>
-                    <img alt="camera pointing up towards skyscrapers" src="./assets/Mask Group 142.png"
-                        srcset="./assets/MaskGroup142@2x.png 2x" class="img img__bg" />
+                    <img alt="camera pointing up towards skyscrapers" src="assets/Mask Group 142.png"
+                        srcset="assets/MaskGroup142@2x.png 2x" class="img img__bg" />
                 </picture>
             </section>
             <section class="section section__party">
@@ -139,8 +139,8 @@
                         More</a>
                 </div>
                 <picture>
-                    <img alt="doughnuts falling" src="./assets/Mask Group 141.png"
-                        srcset="./assets/MaskGroup141@2x.png 2x" class="img img__bg" />
+                    <img alt="doughnuts falling" src="assets/Mask Group 141.png" srcset="assets/MaskGroup141@2x.png 2x"
+                        class="img img__bg" />
                 </picture>
             </section>
         </section>
@@ -647,7 +647,7 @@
         <footer class="footer">
             <h1 class="h1 h1__footer">Driven by purpose: To transform lives</h1>
             <h2 class="h2 h2__footer">Core values guide everything we do.</h2>
-            <section class="section section__footer">
+            <div class="section section__footer">
                 <p class="p p__footer">Preview some of the content on Purpose/Our DNA page. That content may include
                     mission and vision. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero
                     ornare, tempus sem quis, volutpat neque. Sed fringilla at erat at volutpat.</p>
@@ -657,7 +657,7 @@
                 <p class="p p__footer">Preview some of the content on Purpose/Our DNA page. That content may include
                     mission and vision. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero
                     ornare, tempus sem quis, volutpat neque. Sed fringilla at erat at volutpat.</p>
-            </section>
+            </div>
             <a href="https://www.imaginuity.com/careers/apply/"
                 class="a a__button--whiteOutline a__buttonFooter a__button--small">>
                 Learn
