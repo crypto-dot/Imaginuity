@@ -526,12 +526,16 @@ tspan {
         /* font-size */
         --sm-font-size: 0.75rem;
         --reg-font-size: 0.875rem;
-        --regLg-font-size: 1.125rem;
+        --regLg-font-size: 1rem;
         --lgSm-font-size: 1.625rem;
         --lg-font-size: 1.5rem;
 
         --navBar-height: 3.5rem;
         --logo-width: 8.125rem;
+    }
+
+    tspan {
+        font-size: var(--reg-font-size);
     }
 
     .nav {
