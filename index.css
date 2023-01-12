@@ -30,6 +30,7 @@
     --section-height: 36.875rem;
     --button-lg-width: 13.188rem;
     --button-sm-width: 9.188rem;
+    --button-xsm-width: 8.4375rem;
     --button-height: 1.875rem;
     --section-h1-max-width: 30.688rem;
     --footer-height: 20.9375rem;
@@ -282,6 +283,10 @@ tspan {
     width: var(--button-sm-width);
 }
 
+.a__button--xsmall {
+    width: var(--button-xsm-width);
+}
+
 .h2 {
     order: 1;
     font-weight: var(--reg-font-weight);
@@ -452,7 +457,11 @@ tspan {
 
     .section__mobileConnect {
         display: flex;
-        margin-right: .75rem;
+    }
+
+    .nav {
+        align-items: flex-end;
+        padding-bottom: 1rem;
     }
 
     .sectionPartyWrapper {
@@ -529,7 +538,6 @@ tspan {
         align-items: flex-end;
         padding-bottom: 0.6rem;
     }
-
 
     .ul__benefits {
         display: grid;
