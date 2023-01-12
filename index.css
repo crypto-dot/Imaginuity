@@ -329,11 +329,11 @@ tspan {
 
 .section__join {
     padding: var(--section-top-padding) 0 var(--section-bottom-padding) var(--horizontal-offset);
-    background-image: image-set(url("./assets/Mask Group 139.png") 1x,
-            url("./assets/Mask\ Group\ 139@2x.png") 2x);
+    background-image: image-set(url("./assets/MaskGroup139.png") 1x,
+            url("./assets/MaskGroup139@2x.png") 2x);
     background-image:
-        -webkit-image-set(url("./assets/Mask Group 139.png") 1x,
-            url("./assets/Mask\ Group\ 139@2x.png") 2x);
+        -webkit-image-set(url("./assets/MaskGroup139.png") 1x,
+            url("./assets/MaskGroup139@2x.png") 2x);
     background-repeat: no-repeat;
     background-size: cover;
     max-height: var(--section-join-height);
