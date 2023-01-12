@@ -43,9 +43,13 @@
     --headers-max-mobile-width: 20.875rem;
 
     /* Paddings / Margins / Gaps */
-    --paragraph-top-margin: 0.688rem;
+    --paragraph-sm-top-margin: 0.6875rem;
+    --paragraph-reg-top-margin: 0.688rem;
+    --paragraph-med-top-margin: 0.9375rem;
+    --paragraph-lg-top-margin: 2.125rem;
     --section-top-padding: 3.875rem;
     --section-bottom-padding: var(--section-top-padding);
+    --footer-bottom-padding: 2.5rem;
     --anchor-button-top-margin: 1.813rem;
     --grid-gap: 3.4375rem;
     --h1--benefits-margin-bottom: 2rem;
@@ -79,7 +83,7 @@ tspan {
 
 .p {
     order: 3;
-    margin-top: var(--paragraph-top-margin);
+    margin-top: var(--paragraph-reg-top-margin);
     line-height: var(--paragraph-line-height);
     font-size: var(--sm-font-size);
     font-weight: var(--reg-font-weight);
@@ -315,6 +319,12 @@ tspan {
     font-size: var(--sm-font-size);
 }
 
+.p__footer,
+.p__sectionLeftFocus,
+.p__join {
+    margin-top: var(--paragraph-sm-top-margin);
+}
+
 .section__join {
     padding: var(--section-top-padding) 0 var(--section-bottom-padding) var(--horizontal-offset);
     background-image: image-set(url("./assets/Mask Group 139.png") 1x,
@@ -395,7 +405,7 @@ tspan {
 }
 
 .footer {
-    padding: var(--section-top-padding) var(--horizontal-offset) 2.5rem var(--horizontal-offset);
+    padding: var(--section-top-padding) var(--horizontal-offset) var(--footer-bottom-padding) var(--horizontal-offset);
     display: flex;
     flex-direction: column;
     background-image: image-set(url("./assets/MaskGroup143.png") 1x,
@@ -447,6 +457,10 @@ tspan {
 }
 
 @media (max-width:1000px) {
+    :root {
+        --footer-bottom-padding: 3.875rem;
+    }
+
     .p {
         max-width: var(--tablet-paragraph-max-width);
     }
@@ -470,10 +484,6 @@ tspan {
 
     .p__rightParty {
         text-align: start;
-    }
-
-    .footer {
-        padding-bottom: 3.75rem;
     }
 
     .section_right {
@@ -532,6 +542,48 @@ tspan {
 
         --navBar-height: 3.5rem;
         --logo-width: 8.125rem;
+        --anchor-button-top-margin: 1.875rem;
+        --anchor-button-leftFocus-top-margin-mobile: .6875rem;
+
+        --section-explore-mobile-height: 29.8125rem;
+        --section-headline-mobile-height: 4.875rem;
+        --section-focus-mobile-height: 28.5rem;
+        --section-join-mobile-height: 17.6875rem;
+        --footer-mobile-height: 40.5rem;
+    }
+
+    .section__explore {
+        height: var(--section-explore-mobile-height);
+    }
+
+    .video__typing {
+        height: var(--section-explore-mobile-height);
+    }
+
+    .sectionLeftFocus,
+    .section__business,
+    .section__party {
+        min-height: var(--section-focus-mobile-height);
+    }
+
+    .section__explore {
+        min-height: var(--section-explore-mobile-height);
+    }
+
+    .footer {
+        min-height: var(--footer-mobile-height);
+    }
+
+    .sectionLeftFocus>.a__button--whiteOutline {
+        margin-top: var(--anchor-button-leftFocus-top-margin-mobile);
+    }
+
+    .p {
+        margin-top: var(--paragraph-med-top-margin);
+    }
+
+    .p__sectionLeftFocus {
+        margin-top: var(--paragraph-lg-top-margin);
     }
 
     tspan {
