@@ -519,6 +519,8 @@ tspan {
         --regLg-font-size: 1.125rem;
         --lgSm-font-size: 1.625rem;
         --lg-font-size: 1.5rem;
+
+        --navBar-height: 3.5rem;
     }
 
     .ul__benefits {
