@@ -4,7 +4,7 @@
 Take home assignment
 
 ## Technologies And Why I Used Them
-I decided to use vanilla HTML, CSS, and JS for this take home assignment. While I could have theoretically used any framework I wanted I decided to keep it simple for a few different reasons:
+I decided to use vanilla HTML, CSS, and JS for this take home assignment. While I could have theoretically used any framework I decided to keep it simple for a few different reasons:
 
 1. This is a simple landing page. There is no user authentication or anything complex happening behind the scenes. There is no need for separate components when each component on the page requires at most 25 to 50 lines of CSS. 
 
@@ -16,4 +16,4 @@ I decided to use vanilla HTML, CSS, and JS for this take home assignment. While 
 
 ## What's BEM Conventions, and why did you use it?
 
-BEM aka Block Element Modifier conventions allow CSS developers to write at most (0,1,0) specificity. This means LESS CSS and LESS COMPLEX CSS. Quite literally the best of both worlds. Additionally, BEM conventions are very easy to pickup and remember (the name BEM is how CSS classes are named). BEM conventions refuse to use IDs (this adds complexity) and only relies on CSS classes. This allows other people to more easily read through your CSS AND make additions to it without wondering if something should be an ID or not.
+BEM aka Block Element Modifier conventions allow CSS developers to write at most (0,1,0) specificity. This means LESS CSS and LESS COMPLEX CSS. Quite literally the best of both worlds. Additionally, BEM conventions are very easy to pickup and remember (the name BEM is how CSS classes are named). BEM conventions refuse to use IDs (this adds complexity) and only relies on CSS classes. This allows other people to more easily read through your CSS AND make additions to it without wondering if something should be an ID or not and how to name the class according to the easy conventions.
